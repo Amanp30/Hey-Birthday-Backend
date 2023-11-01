@@ -1,0 +1,7 @@
+NODE_ENV=production
+PORT=8000
+DEV_CLIENT_URL=http://localhost:3000
+PROD_CLIENT_URL='https://yourdomain.com'
+MONGO_LOCAL=mongodb://127.0.0.1:27018/
+MONGO_PRODUCTION=yourmongouri
+JWT_SECRET=
