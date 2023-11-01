@@ -9,8 +9,8 @@ const Allowedurl =
 
 exports.corsOptions = {
   origin: [
-    Allowedurl,
     "https://hey-birthday.vercel.app/",
+    Allowedurl,
     "http://localhost:3000",
     "https://amanpareek.link",
   ],
@@ -21,8 +21,8 @@ exports.corsOptions = {
 
 exports.crossOriginResourceSharing = function (req, res, next) {
   res.header("Access-Control-Allow-Origin", [
-    Allowedurl,
     "https://hey-birthday.vercel.app/",
+    Allowedurl,
     "http://localhost:3000",
     "https://amanpareek.link",
   ]);
