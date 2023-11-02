@@ -16,6 +16,6 @@ router.get("/delete-list/:id", requireAuth, deleteList);
 router.get("/increase-limit/:id/:times", requireAuth, increaseAllowLimit);
 router.get("/import-list/:code/:userid", requireAuth, importListNow);
 
-router.post("/newlist/:userid", requireAuth, newListData);
+router.post("/new-list/:userid", requireAuth, newListData);
 
 module.exports = router;

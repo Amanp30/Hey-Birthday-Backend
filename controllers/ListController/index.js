@@ -126,7 +126,7 @@ exports.newListData = async (req, res, next) => {
 
       next(error);
     } finally {
-      session.endSession();
+      session.endSession(); // Ensure the session is properly ended
     }
   });
 };
