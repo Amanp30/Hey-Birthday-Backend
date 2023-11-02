@@ -59,7 +59,10 @@ exports.newListData = async (req, res, next) => {
 
         do {
           uniqueCode = generateUniqueCode(8);
-          isAlready = await ListsCollection.findOne({ code: uniqueCode });
+          isAlready = await ListsCollection.findOne(
+            { code: uniqueCode },
+            { session: session }
+          );
         } while (isAlready);
 
         const AllObjectIDS = JSON.parse(fields.ids).map(
@@ -109,7 +112,7 @@ exports.newListData = async (req, res, next) => {
         };
 
         const result = await ListsCollection.insertOne(data, {
-          session,
+          session: session,
         });
         await session.commitTransaction();
 
